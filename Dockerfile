@@ -40,5 +40,9 @@ ENV PATH /opt/python/2.7.12/bin\
 :/opt/python/pypy3-portable-2.4/bin\
 :$PATH
 
+RUN apt-get install -y python-dev libssl-dev python-pip git-core \
+libmysqlclient-dev \
+libpq-dev libffi-dev libxslt-dev
+
 # Install first-class tools
 RUN pip install tox virtualenv
